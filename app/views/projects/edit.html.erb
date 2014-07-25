@@ -1,0 +1,17 @@
+<div id="project-edit" class="main-content">
+<p>Edit a project</p>
+<% if flash[:notice] %><p class="flash"><%= raw(flash[:notice]) %></p><% end %>
+	<%= form_for @project do |f| %>
+	  <p><%= f.label :slug %> <%= f.text_field :slug %></p>
+	  <p><%= f.label :name %> <%= f.text_field :name %></p>
+	  <p><%= f.label :image_1 %> <%= f.text_field :image_1 %></p>
+	  <p><%= f.label :image_2 %> <%= f.text_field :image_2 %></p>
+	  <p><%= f.label :image_3 %> <%= f.text_field :image_3 %></p>
+	  <p><%= f.label :image_4 %> <%= f.text_field :image_4 %></p>
+	  <p>Description</br>(html markup)</br><%= f.text_area :description, size: "80x20" %></p>
+	  <p><%= f.label :order %> <%= f.text_field :order %></p>
+
+
+	  <%= link_to 'Update Project', "#", :onclick => "$('.edit_project').submit()" %>
+	<% end %>
+</div>

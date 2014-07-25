@@ -1,0 +1,13 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: lee_part_deux_production
+  pool: 5
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: lee_part_deux_development
+  pool: 5
+  # username: postgres
+  # password: <%= ENV['POSTGRESPASSWORD'] %>

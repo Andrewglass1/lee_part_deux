@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>L & L</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="container">
+	<div id="nav-bar">
+		<div id="left-links">
+			<p id="name">L & L</p>
+		</div>
+		<div id="right-links">
+			<%= link_to "Information", info_index_path, :class => "nav-link#{add_current_class('info')}", :name => "information" %>
+			<%= link_to "Projects", projects_path, :class => "nav-link#{add_current_class('projects')}", :name => "projects" %>
+		</div>
+	</div>
+
+<%= yield %>
+</div>
+
+</body>
+</html>

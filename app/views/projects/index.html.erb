@@ -1,0 +1,24 @@
+<div id="projects" class="main-content">
+
+  <% if @project_bucket_3.length < 1 %>
+  	<div id="centered">
+  		<%= image_tag "https://s3.amazonaws.com/leemigs/coming_soon.jpg", :id => "coming-soon" %>
+  	</div>
+  <% else %>
+    <div id="left">
+      <% @project_bucket_1.each do |project| %>
+        <%= render :partial => "projects/project", :locals => {:project => project} %>
+      <% end %>
+    </div>
+    <div id="middle">
+      <% @project_bucket_2.each do |project| %>
+        <%= render :partial => "projects/project", :locals => {:project => project} %>
+      <% end %>
+    </div>
+    <div id="right">
+      <% @project_bucket_3.each do |project| %>
+        <%= render :partial => "projects/project", :locals => {:project => project} %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

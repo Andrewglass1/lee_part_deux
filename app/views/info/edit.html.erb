@@ -1,0 +1,10 @@
+<div class="main-content">
+  <p><span class="title">edit info content</span></p>
+  <%= form_tag("/update-info", method: :put, id: "update-info-form") do %>
+    <p>Column 1</br>(html markup)</br><%= text_area_tag "info_content[column_1]", @info_content.column_1, size: "80x10" %></p>
+    <p>Column 2</br>(html markup)</br><%= text_area_tag "info_content[column_2]", @info_content.column_2, size: "80x10" %></p>
+    <p>Column 3</br>(html markup)</br><%= text_area_tag "info_content[column_3]", @info_content.column_3, size: "80x10"  %></p>
+
+    <%= link_to 'Update Info Content', "#", :onclick => "$('#update-info-form').submit()" %>
+  <% end %>
+</div>

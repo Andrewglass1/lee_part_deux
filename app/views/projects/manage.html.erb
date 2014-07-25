@@ -1,0 +1,27 @@
+<div class="main-content">
+  <% if @projects.any? %>
+    <p><span class="title">manage projects</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th><p>name</p></th>
+          <th><p>slug</p></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      	<% @projects.each do |project| %>
+    	    <tr>
+    	      <td><p><%= link_to project.name, project_path(project.slug) %></p></td>
+    	      <td><p><%= project.slug %></p></td>
+            <td><p><%= link_to "edit", edit_project_path(project.slug) %></p></td>
+    	      <td><p><%= link_to "delete", project_path(project), method: :delete, data: { confirm: 'Are you super serious?' } %></p></td>
+    	    </tr>
+    	  <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>oh nos! you dont have any projects</p>
+    <p><%= link_to "create one", new_project_path %></p>
+  <% end %>
+</div>

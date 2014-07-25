@@ -1,0 +1,82 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  left: 0; top: 0; margin: 0px; padding: 0px;
+}
+
+@font-face {
+  font-family: leigh;
+  src: url(<%= asset_path "leigh_font.otf" %>);
+  src: url(<%= asset_path "leigh_font.fon" %>) format("fon");
+  src: url(<%= asset_path "leigh_font.ttf" %>) format("truetype");
+}
+#container {width: 1040px; margin: 0 auto; }
+
+#nav-bar {
+    background-color: white;
+    position: fixed;
+    width: 1040px;
+    height: 42px;
+    z-index: 1;
+    padding-top: 50px;
+    border-bottom: 2px solid black;
+	#name {font-size: 15px; font-family: leigh; margin: 0 0 22px 0;}
+	#left-links {display: inline-block;}
+	#right-links {display: inline-block; float: right; position: relative;}
+	.nav-link {margin-right: 50px; padding: 5px 10px; vertical-align: top;
+		&.current { background-color: yellow;}
+		&.last {margin-right: 0;}
+	}
+}
+
+#left  	{ width: 320px; float: left; margin-right: 40px;}
+#middle { width: 320px; float: left; margin-right: 40px;}
+#right 	{ width: 320px; float: left;}
+
+
+#left-third{ width: 320px; float: left; margin-right: 40px;}
+#right-two-thirds{ width: 640px; float: left; margin-right: 40px; padding-top: 30px;}
+
+#centered {width: 100%;}
+
+p, span, a { color: black; text-decoration: none; font-size: 15px; line-height: 19px; font-family: leigh;}
+
+a:hover { color: #00FF00;}
+
+.main-content{
+  margin-top: 100px;
+  z-index: 0;
+  position: absolute;
+  padding-top: 28px;
+  width: 1040px;
+}
+
+//information
+
+.title {border-bottom: 2px solid black; margin: 15px 0; display: inline-block;}
+
+
+//projects
+
+#coming-soon {margin: auto; display: block;}
+
+//projects show
+.project-index-image { width: 100%;}
+
+//projects show
+
+.project-image {width: 640px; margin-bottom: 15px;}
+
+//projects new, edit
+
+#project-edit,
+#project-new{
+	.flash 	{ background-color: #eee; padding: 10px 0; text-align: center;}
+	label 	{ display: inline-block; width: 150px; vertical-align: top;}
+}
+
+// projects manage
+
+th 				{ text-align: left; }

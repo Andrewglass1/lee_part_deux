@@ -1,0 +1,11 @@
+<div id="information" class="main-content">
+	<div id="left">
+		<%= @info_content.column_1.html_safe if @info_content.column_1 %>
+	</div>
+	<div id="middle">
+		<%= @info_content.column_2.html_safe if @info_content.column_2 %>
+	</div>
+	<div id="right">
+		<%= @info_content.column_3.html_safe if @info_content.column_3 %>
+	</div>
+</div>

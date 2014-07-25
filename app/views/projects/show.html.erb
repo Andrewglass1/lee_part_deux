@@ -1,0 +1,16 @@
+<div id="project-show" class="main-content">
+	<div id="left-third">
+		<p>
+			<span class="next-link"><%= link_to "<<", @project.prev_proj_link  %></span>
+			<span class="title"><%= @project.name %></span>
+			<span class="next-link"><%= link_to ">>", @project.next_proj_link  %></span>
+		</p>
+		<%= @project.description.html_safe %>
+	</div>
+	<div id="right-two-thirds">
+		<%= image_tag @project.image_1, :class => "project-image" if @project.image_1.present? %>
+		<%= image_tag @project.image_2, :class => "project-image" if @project.image_2.present? %>
+		<%= image_tag @project.image_3, :class => "project-image" if @project.image_3.present? %>
+		<%= image_tag @project.image_4, :class => "project-image" if @project.image_4.present? %>
+	</div>
+</div>
